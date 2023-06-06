@@ -1,0 +1,9 @@
+---
+export const prerender = true;
+
+import { renderTrpcPanel } from "trpc-panel";
+import router from "../../trpc";
+
+const renderedHTML = renderTrpcPanel(router, { url: "/api" });
+---
+<html set:html={renderedHTML} />
